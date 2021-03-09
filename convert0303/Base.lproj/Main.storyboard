@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="00" translatesAutoresizingMaskIntoConstraints="NO" id="t3u-BK-bM4">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="O8G-4v-TzL">
                                 <rect key="frame" x="30" y="74" width="330" height="332.33333333333331"/>
                                 <subviews>
@@ -161,12 +164,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t3u-BK-bM4" secondAttribute="trailing" id="Gec-Pi-23T"/>
                             <constraint firstItem="O8G-4v-TzL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="NFJ-O4-DpP"/>
+                            <constraint firstItem="t3u-BK-bM4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Pnj-Nm-T3X"/>
+                            <constraint firstItem="t3u-BK-bM4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rv0-j2-UeZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t3u-BK-bM4" secondAttribute="bottom" id="SJy-kV-qbd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O8G-4v-TzL" secondAttribute="trailing" constant="30" id="iKC-D2-beA"/>
                             <constraint firstItem="O8G-4v-TzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="mOu-im-qwp"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="img" destination="t3u-BK-bM4" id="jeq-PL-AB1"/>
                         <outlet property="input" destination="sN4-AQ-SsX" id="F3X-VR-JHY"/>
                         <outlet property="text1" destination="i2r-Xd-fXF" id="0bX-iT-HN2"/>
                         <outlet property="text2" destination="v1o-gA-jhX" id="8dm-WC-6v1"/>
@@ -184,6 +192,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="00" width="500" height="375"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
